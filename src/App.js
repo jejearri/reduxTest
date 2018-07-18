@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import {connect} from 'react-redux';
 import {addToDo, removeToDo} from './actions';
+import Button from './Button';
 
 const mapDispatchToProps = dispatch => {
   return {
@@ -40,6 +41,7 @@ class App extends Component {
               })
             }
           </ul>
+          <Button add={this.onAddHandler.bind(this)} />
         <input type="button" value="add" onClick={this.onAddHandler.bind(this)} />
         <input type="button" value="remove" onClick={this.onRemoveHandler.bind(this)} />
       </div>
